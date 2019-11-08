@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 //Components
-import SmurfForm from "./SmurfForm";
+
 import SmurfList from "./SmurfList";
 
 class App extends Component {
@@ -12,7 +12,6 @@ class App extends Component {
         <header>
           <h1>SMURFS! 2.0 W/ Redux</h1>
         </header>
-        <SmurfForm />
         <SmurfList />
       </div>
     );

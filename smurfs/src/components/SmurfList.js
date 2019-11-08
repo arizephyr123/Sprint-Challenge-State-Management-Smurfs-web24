@@ -1,12 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchSmurfs } from '../actions'
+import { fetchSmurfs, addNewSmurf } from '../actions';
+import SmurfForm from "./SmurfForm";
 
 const SmurfList = props => {
   console.log("SmurfList props:", props);
   return (
     <>
     <button onClick={props.fetchSmurfs}>Get Smurfs From API</button>
+    <div>
+    <SmurfForm addNewSmurf={props.addNewSmurf}/>
+    </div>
       {props.smurfsData.map(smurf => {
         return (
           <div  key={smurf.id}>
@@ -29,5 +33,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchSmurfs }
+  { fetchSmurfs, addNewSmurf }
 )(SmurfList);

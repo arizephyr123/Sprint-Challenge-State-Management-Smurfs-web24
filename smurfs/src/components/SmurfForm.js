@@ -1,10 +1,18 @@
 import React from "react";
 import useInput from "../hooks/useInput";
 
-const SmurfForm = () => {
+const SmurfForm = props => {
+    console.log(props);
   const [name, setName, handleNewName] = useInput("");
   const [age, setAge, handleNewAge] = useInput("");
   const [height, setHeight, handleNewHeight] = useInput("");
+
+  const newSmurfObj = {
+    name: name,
+    age: age,
+    height: height,
+    id: Date.now()
+  }
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -46,7 +54,9 @@ const SmurfForm = () => {
         value={height}
       />
       <button
-      className='add-new-btn'>Add New Smurf</button>
+      className='add-new-btn'
+      onClick={() => props.addNewSmurf(newSmurfObj)}
+      >Add New Smurf</button>
     </form>
   );
 };
