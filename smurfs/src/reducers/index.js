@@ -26,7 +26,7 @@ switch(action.type){
         console.log("reducer FETCH_SMURF_SUCCESS")
     return{
         ...state,
-        smurfsData: [...state.smurfsData, action.payload],
+        smurfsData: [...state.smurfsData, ...action.payload],
           isLoading: false
     };
     case FETCH_SMURF_FAIL:
