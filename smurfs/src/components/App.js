@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 
 //Components
-
 import SmurfList from "./SmurfList";
 
 class App extends Component {
