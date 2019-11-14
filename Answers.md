@@ -1,4 +1,4 @@
-1. What problem does the context API help solve?
+1. What problem does the context API help solve?  
 
 Context API removes the need to prop drill down layers of components. Instead a Context Provider can wrap the branches of the app that will need to access that data and the components within the wrapped brances can use React's useContext to create a context object with the needed data.
 
